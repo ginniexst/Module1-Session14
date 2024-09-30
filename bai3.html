@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script>
+        let text1 = document.createElement("h1");
+        text1.innerText = "This text is optional";
+        text1.setAttribute("id","change-text");
+        document.body.appendChild(text1);
+
+        function changeText() {
+            let text = document.getElementById("change-text");
+            text.innerText = "Text after change";
+        }
+
+        let btn = document.createElement("button");
+        btn.innerText = "Press to say hide text";
+        document.body.appendChild(btn);
+        btn.setAttribute("onclick","changeText()");
+
+        let styles = `
+        button {
+            width: 150px;
+            height: 50px;
+            background-color: rgb(105, 220, 220);
+            border-radius: 10px;
+            border: none;
+            margin: 100px 300px;
+        }
+        `
+
+        let styleSheet = document.createElement("style");
+        styleSheet.innerText = styles;
+        document.head.appendChild(styleSheet);
+    </script>
+</body>
+
+</html>
