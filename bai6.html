@@ -6,21 +6,10 @@
     <title>Document</title>
 </head>
 <body>
-    <input type="text" id="user-input"/>
-    <button onclick="createList()">add item</button>
-    <p id="item-list"></p>
-    
-    <script>
-
-        function createList() {
-            let input = document.getElementById("user-input").value;
-            
-            let itemList = document.createElement("ul");
-            itemList.innerHTML = "<li>" + input + "</li>";
-            
-            document.getElementById("item-list").appendChild(itemList);
-        }
-
-    </script>
+    <h1>Bài 6</h1>
+    <input type="text" id="userInput"> 
+    <button id="addBtn">add item</button>
+    <span id="listedItems"></span>
+    <script src="/bai6.js"></script>
 </body>
 </html>
